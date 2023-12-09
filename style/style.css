@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #22775b;
+  --secondary: #1d654d;
+  --shadow: #278969;
+}
+
+body {
+  background: var(--main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 400px;
+  color: white;
+  background: var(--main);
+  box-shadow:  20px 20px 60px var(--shadow),
+               -20px -20px 60px var(--secondary);  border-radius: 1rem;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  background: transparent;
+  width: 100%;
+  font-size: 1.3rem;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border: none;
+}
+input[type=text]:focus{
+  outline: transparent;
+}
+
+.bill-total, .tip {
+  background: var(--secondary);
+  border-radius: 1.4rem;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.people {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  border: none;
+  background: var(--secondary);
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: var(--shadow);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+label, h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width:375px){
+  main {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width:325px){
+  main {
+    width: 300px;
+    padding: 50px 30px;
+
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .total h3, .total h2 {
+    text-align: right;
+  }
+}
